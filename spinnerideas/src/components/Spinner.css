@@ -151,3 +151,60 @@
     height: 60px;
     border-color: white transparent white transparent;
 }
+
+/*Bars1*/
+.bars1 {
+    width: 45px;
+    height: 70px;
+    aspect-ratio: 1;
+    --c:no-repeat linear-gradient(#000 0 0);
+    background: var(--c), var(--c), var(--c);
+    animation: 
+      bars1animation1 1s infinite,
+      bars1animation2 1s infinite;
+  }
+  @keyframes bars1animation1 {
+   0%,100% {background-size:20% 100%}
+   33%,66% {background-size:20% 20%}
+  }
+  @keyframes bars1animation2 {
+   0%,33%   {background-position: 0    0,50% 50%,100% 100%}
+   66%,100% {background-position: 100% 0,50% 50%,0    100%}
+  } 
+
+/*PlusSignToCircle*/
+.plussigntocircle {
+    width: 40px;
+    height: 40px;
+    aspect-ratio: 1;
+    --c: linear-gradient(#000 0 0);
+    --m: radial-gradient(farthest-side, #000 92%, transparent);
+    background: 
+      var(--m) center / 12px 12px,
+      var(--c) left 50% top -20px / 8px 16px,
+      var(--c) left 50% bottom -20px / 8px 16px,
+      var(--c) top 50% left -20px / 16px 8px,
+      var(--c) top 50% right -20px / 16px 8px;
+    background-repeat: no-repeat;
+    animation: plussigntocircle1 1.5s infinite, plussigntocircle2 1.5s infinite;
+}
+
+@keyframes plussigntocircle1 {
+    30%, 70% {
+      background-position: 
+        center,
+        left 50% top calc(50% - 8px),
+        left 50% bottom calc(50% - 8px),
+        top 50% left calc(50% - 8px),
+        top 50% right calc(50% - 8px);
+    }
+  }
+  
+  @keyframes plussigntocircle2 {
+    0%, 40% {
+      transform: rotate(0);
+    }
+    60%, 100% {
+      transform: rotate(90deg);
+    }
+  }

@@ -5,6 +5,8 @@ import Spinner2 from './components/Spinner2';
 import Spinner3 from './components/Spinner3';
 import Ripple from './components/Ripple';
 import SlicedCircleLoader from './components/SlicedCircleLoader';
+import Bars1 from './components/Bars1';
+import PlusSignToCircle from './components/PlusSignToCircle';
 
 function App() {
   return (
@@ -14,6 +16,9 @@ function App() {
       <Spinner3 />
       <Ripple />
       <SlicedCircleLoader />
+      <Bars1 />
+      <PlusSignToCircle />
+      
     </div>
   );
 }
